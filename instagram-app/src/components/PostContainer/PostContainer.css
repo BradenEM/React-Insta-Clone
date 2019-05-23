@@ -1,0 +1,35 @@
+.posts {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20px;
+  height: auto;
+}
+
+.post-container {
+  height: 100%;
+}
+
+.post-title {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  font-size: 0.7em;
+}
+
+.thumbnail {
+  border-radius: 50%;
+  width: 5%;
+  height: 5%;
+  margin-left: 10px;
+}
+
+.username {
+  margin-left: 10px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
