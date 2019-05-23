@@ -2,6 +2,7 @@ import React from "react";
 import data from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import "./App.css";
+import PostContainer from "./components/PostContainer/PostContainer";
 
 class App extends React.Component {
   constructor() {
@@ -13,7 +14,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <SearchBar />
+        <div>
+          <SearchBar />
+        </div>
+        <div>
+          <PostContainer posts={this.state.posts} />
+        </div>
       </div>
     );
   }
