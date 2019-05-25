@@ -8,24 +8,21 @@ function PostContainer(props) {
     <>
       {props.posts.map(posts => (
         <div key={posts.timestamp} className="posts">
-          <div className="post-container">
-            <div className="post-title">
-              <img
-                className="thumbnail"
-                src={posts.thumbnailUrl}
-                alt={`${posts.username}'s profile avatar`}
-              />
-              <h2 className="username">{posts.username}</h2>
-            </div>
-            <div>
-              <img
-                className="post-image"
-                src={posts.imageUrl}
-                alt={`${posts.username}'s uploaded media`}
-              />
-            </div>
+          <div className="post-title">
+            <img
+              className="thumbnail"
+              src={posts.thumbnailUrl}
+              alt={`${posts.username}'s profile avatar`}
+            />
+            <h2 className="username">{posts.username}</h2>
           </div>
-
+          <div className="img-container">
+            <img
+              className="post-image"
+              src={posts.imageUrl}
+              alt={`${posts.username}'s uploaded media`}
+            />
+          </div>
           <div>
             <CommentSection comments={posts.comments} />
           </div>
