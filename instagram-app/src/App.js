@@ -8,8 +8,12 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: data
+      posts: []
     };
+  }
+
+  componentDidMount() {
+    this.setState({ posts: data });
   }
   render() {
     return (
