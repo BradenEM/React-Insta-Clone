@@ -7,7 +7,8 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments,
       username: "Braden",
-      text: ""
+      text: "",
+      likes: 0
     };
   }
 
@@ -28,18 +29,17 @@ class CommentSection extends React.Component {
     this.setState({ text: e.target.value });
   };
 
-  // addNewComment((e, indNum) => {
-  //   e.preventDefault();
-  //   console.log(props.comments[indNum]);
-  // });
+  addLike = e => {
+    e.preventDefault();
+    this.setState({ likes: this.state.likes + 1 });
+  };
 
   render() {
-    console.log(this.state.comments);
-
     return (
       <div className="comment-section">
-        <div>
-          <i className="far fa-heart small-icon" />
+        <div className="like-bar">
+          <i className="far fa-heart small-icon" onClick={this.addLike} />
+          <span className="likes">{this.state.likes}</span>
           <i className="far fa-comment small-icon" />
         </div>
         {this.state.comments.map(comment => (
