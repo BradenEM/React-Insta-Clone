@@ -1,7 +1,8 @@
 import React from "react";
 import "./SearchBar.css";
 
-function SearchBar() {
+const SearchBar = props => {
+  console.log(props);
   return (
     <div className="entire-navbar">
       <div className="navbar-left">
@@ -10,7 +11,16 @@ function SearchBar() {
         <span className="insta-name">Insta-Clone</span>
       </div>
       <div className="navbar-mid">
-        <input type="text" placeholder="Search" />
+        <form>
+          <input
+            className="search-bar"
+            type="text"
+            placeholder="Search"
+            value={props.searchText}
+            onChange={props.searchChangeHandler}
+            onSubmit={props.commenceSearch}
+          />
+        </form>
       </div>
       <div className="navbar-right">
         <i className="fa fa-compass icon right-1" />
@@ -19,6 +29,6 @@ function SearchBar() {
       </div>
     </div>
   );
-}
+};
 
 export default SearchBar;

@@ -27,6 +27,14 @@
   align-items: center;
 }
 
+.search-bar {
+  text-align: center;
+  background: lightgray;
+  border: 1px solid black;
+  border-radius: 2px;
+  height: 20px;
+}
+
 .navbar-right {
   width: 12%;
   display: flex;
