@@ -11,7 +11,7 @@ class CommentSection extends React.Component {
     };
   }
 
-  addNewComment = (e, indNum) => {
+  addNewComment = e => {
     e.preventDefault();
     const newComment = {
       username: this.state.username,
@@ -39,8 +39,8 @@ class CommentSection extends React.Component {
     return (
       <div className="comment-section">
         <div>
-          <button>Like</button>
-          <button>Comment</button>
+          <i className="far fa-heart small-icon" />
+          <i className="far fa-comment small-icon" />
         </div>
         {this.state.comments.map(comment => (
           <div key={comment.text} className="comment">
@@ -52,8 +52,9 @@ class CommentSection extends React.Component {
         <div>
           <form onSubmit={this.addNewComment}>
             <input
+              className="comment-input"
               type="text"
-              placeholder="Add a comment..."
+              placeholder="   Add a comment..."
               onChange={this.changeHandler}
               value={this.state.commentText}
             />
