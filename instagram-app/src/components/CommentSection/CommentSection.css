@@ -1,0 +1,15 @@
+.comment-section {
+  border: 1px solid lightgray;
+}
+
+.small-icon {
+  font-size: 25px;
+  margin: 10px 10px 0 10px;
+}
+
+.comment-input {
+  border: none;
+  border-top: 2px solid lightgray;
+  width: 100%;
+  height: 30px;
+}
