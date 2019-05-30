@@ -9,6 +9,8 @@ class App extends React.Component {
     super();
     this.state = {
       posts: [],
+      searchInput: "",
+      name: "searchInput",
       filteredPosts: []
     };
   }
@@ -17,31 +19,22 @@ class App extends React.Component {
     this.setState({ posts: data });
   }
 
-  searchChangeHandler = e => {
-    console.log(e.target.value);
-    this.setState({ searchText: e.target.value });
-  };
-
   commenceSearch = e => {
     e.preventDefault();
-    console.log(e.target.value);
-    const posts = this.state.posts.filter(s => {
-      if (s.username.includes(this.state.searchText)) {
-        return s;
+    let posts = this.state.posts.filter(post => {
+      if (post.username.includes(e.target.value)) {
+        return post;
       }
     });
     this.setState({ filteredPosts: posts });
   };
 
   render() {
+    console.log(this.state.posts);
     return (
       <div>
         <div>
-          <SearchBar
-            searchChangeHandler={this.searchChangeHandler}
-            searchText={this.state.searchText}
-            commenceSearch={this.commenceSearch}
-          />
+          <SearchBar commenceSearch={this.commenceSearch} />
         </div>
         <div>
           <PostContainer

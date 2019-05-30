@@ -3,7 +3,6 @@ import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
 function PostContainer(props) {
-  console.log(props);
   return (
     <>
       {props.posts.map(posts => (

@@ -2,7 +2,6 @@ import React from "react";
 import "./SearchBar.css";
 
 const SearchBar = props => {
-  console.log(props);
   return (
     <div className="entire-navbar">
       <div className="navbar-left">
@@ -16,9 +15,8 @@ const SearchBar = props => {
             className="search-bar"
             type="text"
             placeholder="Search"
-            value={props.searchText}
-            onChange={props.searchChangeHandler}
-            onSubmit={props.commenceSearch}
+            onChange={props.commenceSearch}
+            value={props.searchInput}
           />
         </form>
       </div>
