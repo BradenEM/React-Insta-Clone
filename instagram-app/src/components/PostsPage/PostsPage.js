@@ -19,6 +19,7 @@ class PostsPage extends React.Component {
 
   commenceSearch = e => {
     e.preventDefault();
+    // eslint-disable-next-line
     let posts = this.state.posts.filter(post => {
       if (post.username.includes(e.target.value)) {
         return post;
@@ -28,7 +29,6 @@ class PostsPage extends React.Component {
   };
 
   render() {
-    console.log(this.state.posts);
     return (
       <div>
         <div>
