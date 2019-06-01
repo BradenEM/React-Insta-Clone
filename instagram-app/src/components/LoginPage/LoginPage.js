@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import { Button } from "reactstrap";
-// ? importing bootstrap messes up my centering
+// ! importing bootstrap messes up my centering
 
 const Body = styled.div`
   display: flex;
