@@ -3,7 +3,7 @@ import "./CommentSection.css";
 
 class CommentSection extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       comments: props.comments,
       username: "Braden",
@@ -18,14 +18,11 @@ class CommentSection extends React.Component {
       username: this.state.username,
       text: this.state.text
     };
-    console.log(this.state);
     const commentsCopy = this.state.comments;
     commentsCopy.push(newComment);
     this.setState({ comments: commentsCopy });
   };
-
   changeHandler = e => {
-    console.log(e.target.value);
     this.setState({ text: e.target.value });
   };
 
